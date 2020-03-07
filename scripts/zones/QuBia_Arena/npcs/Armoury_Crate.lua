@@ -95,24 +95,32 @@ local loot =
             {itemid = 15275, droprate =   71}, -- rapier_belt
         },
         {
+            {itemid =  4716, droprate =  200}, -- scroll_of_regen
             {itemid =  4751, droprate =  200}, -- scroll_of_erase
-            {itemid =  4715, droprate =  200}, -- scroll_of_reprisal
             {itemid =  4868, droprate =  200}, -- scroll_of_dispel
             {itemid =  5070, droprate =  200}, -- scroll_of_magic_finale
-            {itemid =  4947, droprate =  200}, -- gscroll_of_utsusemi_nin_belt
+            {itemid =  4947, droprate =  200}, -- scroll_of_utsusemi_ni
         },
         {
-            {itemid =     0, droprate =  775}, -- nothing
+            {itemid =     0, droprate =  700}, -- nothing
             {itemid =   745, droprate =   50}, -- gold_ingot
             {itemid =   746, droprate =   50}, -- platinum_ingot
             {itemid =   703, droprate =   50}, -- petrified_log
             {itemid = 16606, droprate =   75}, -- rusty_greatsword
+            {itemid = 16655, droprate =   75}, -- rusty_pick
         },
         {
-            {itemid =     0, droprate =  250}, -- nothing
-            {itemid =  1601, droprate =  250}, -- mannequin_head
-            {itemid =  1602, droprate =  250}, -- mannequin_body
-            {itemid =  1603, droprate =  250}, -- mannequin_hands
+            {itemid =     0, droprate =  300}, -- nothing
+            {itemid =  1601, droprate =  200}, -- mannequin_head
+            {itemid =  1602, droprate =  200}, -- mannequin_body
+            {itemid =  1603, droprate =  200}, -- mannequin_hands
+        },
+
+        {
+            {itemid =     0, droprate =  300}, -- nothing
+            {itemid =  1601, droprate =  200}, -- mannequin_head
+            {itemid =  1602, droprate =  200}, -- mannequin_body
+            {itemid =  1603, droprate =  200}, -- mannequin_hands
         },
         {
             {itemid =     0, droprate =  667}, -- nothing
