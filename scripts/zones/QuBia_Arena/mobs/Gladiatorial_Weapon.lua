@@ -42,8 +42,8 @@ function onMobSpawn(mob)
 local mobsub = mob:AnimationSub()
     local resists = resisttable[mobsub]
     
-    for i =1, #resists.mods, 2  do
-        mob:setMod(resists.mods[i],resists.mods[i + 1])
+    for mobsub, v in ipairs do
+        mob:setMod(resists.mods[v])
     end
 end
 
