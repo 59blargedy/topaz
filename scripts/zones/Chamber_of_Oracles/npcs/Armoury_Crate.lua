@@ -67,6 +67,13 @@ local loot =
             {itemid =  1257, droprate =   50}, -- chunk_of_wind_ore
         },
     },
+    -- KSNM Eye of the Storm
+    [199] =
+    {
+        {
+            {itemid =     0, droprate =  100}, -- nothing
+        },
+    },
 }
 
 function onTrade(player,npc,trade)
