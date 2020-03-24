@@ -78,7 +78,7 @@ local loot =
         },
           
         {    
-            {itemid = 65535, droprate = 1000, amount = 4000},  -- 4k Gil
+            {itemid = 65535, droprate = 1000, amount = 4000},  -- 4k Gil, really should be 24k/total number of players. 
 
         },
         {
