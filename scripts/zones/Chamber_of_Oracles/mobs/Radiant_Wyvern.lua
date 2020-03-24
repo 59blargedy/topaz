@@ -6,8 +6,16 @@
 require("scripts/globals/status")
 require("scripts/globals/monstertpmoves")
 -----------------------------------
-function onMobFight(mob, target)
+function onMobSpawn(mob)
+    mob:setMobMod(tpz.mobMod.SIGHT_RANGE, 17)
+end
+
+function onMobEngaged(mob, target)
     mob:useMobAbility(815)
+end
+
+function onMobFight(mob, target)
+    mob:setMod(tpz.mod.REGAIN, 100)
 end
 
 function onMobDeath(mob, player, isKiller)
