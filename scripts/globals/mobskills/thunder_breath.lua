@@ -2,7 +2,7 @@
 --  Thunder Breath
 --
 --  Description: Deals thunder damage to enemies within a fan-shaped area originating from the caster.
---  Type: Magical (Fire)
+--  Type: Magical (Thunder)
 --
 --
 ---------------------------------------------
