@@ -4,7 +4,6 @@
 -- KSNM: Eye of the Storm
 -----------------------------------
 require("scripts/globals/status")
-require("scripts/globals/monstertpmoves")
 -----------------------------------
 function onMobSpawn(mob)
     mob:setMobMod(tpz.mobMod.SIGHT_RANGE, 17)
