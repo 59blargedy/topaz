@@ -19,13 +19,13 @@ function onMobWeaponSkill(target, mob, skill)
 
  
 local number = math.random (2,5)
-local dt = {}
+
 local t = {}
 
 while table.getn(t) < number do
-	local randomnum =  GetMathRandomExclude(136,142,dt)--136 through 142 are the absorb stat effects
+	local randomnum =  GetMathRandomExclude(136,142,t)--136 through 142 are the absorb stat effects
   	table.insert(t,randomnum)
-  	table.insert(dt,randomnum)
+ 
 end
 	for i, v in ipairs(t) do
   		target:MobDrainAttribute(mob, target, v, 10, 3, 70)--need to set last three somehow
