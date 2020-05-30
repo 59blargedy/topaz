@@ -394,7 +394,7 @@ namespace luautils
             }
             if (PInstance)
             {
-                PInstance->GetEntity(mobid & 0xFFF, TYPE_MOB | TYPE_PET);
+                PMob = PInstance->GetEntity(mobid & 0xFFF, TYPE_MOB | TYPE_PET);
             }
             else
             {
@@ -2913,8 +2913,9 @@ namespace luautils
             Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaMobEntity);
             lua_pushnil(LuaHandle);
             lua_pushnil(LuaHandle);
+            lua_pushboolean(LuaHandle, true);
 
-            if (lua_pcall(LuaHandle, 3, 0, 0))
+            if (lua_pcall(LuaHandle, 4, 0, 0))
             {
                 ShowError("luautils::onMobDeath: %s\n", lua_tostring(LuaHandle, -1));
                 lua_pop(LuaHandle, 1);
@@ -4294,7 +4295,6 @@ namespace luautils
 
         // Clear old messages..
         map_config.server_message.clear();
-        map_config.server_message_fr.clear();
 
         // Load the English server message..
         fp = fopen("./conf/server_message.conf", "rb");
@@ -4312,27 +4312,11 @@ namespace luautils
 
         fclose(fp);
 
-        // Load the French server message..
-        fp = fopen("./conf/server_message_fr.conf", "rb");
-        if (fp == nullptr)
-        {
-            ShowError("Could not read English server message from: ./conf/server_message_fr.conf\n");
-            return 1;
-        }
-
-        while (fgets((char*)line, sizeof(line), fp))
-        {
-            string_t sline((const char*)line);
-            map_config.server_message_fr += sline;
-        }
-
-        fclose(fp);
-
         // Ensure both messages have nullptr terminates..
         if (map_config.server_message.at(map_config.server_message.length() - 1) != 0x00)
+        {
             map_config.server_message += (char)0x00;
-        if (map_config.server_message_fr.at(map_config.server_message_fr.length() - 1) != 0x00)
-            map_config.server_message_fr += (char)0x00;
+        }
 
         return 0;
     }
